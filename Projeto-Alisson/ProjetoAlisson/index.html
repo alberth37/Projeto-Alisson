@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Gestão de Tarefas</h1>
+    </header>
+
+    <main>
+        <section id="adicionarTarefa">
+            <h2>Adicionar Nova Tarefa</h2>
+            <form id="formulario-tarefa">
+                <div>
+                    <label for="idUsuario">ID do Usuário:</label>
+                    <input type="number" id="idUsuario" required>
+                </div>
+
+                <div>
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" required>
+                </div>
+
+                <div>
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao"></textarea>
+                </div>
+
+                <button type="submit">Adicionar Tarefa</button>
+            </form>
+        </section>
+
+        <section id="listaTarefas">
+            <h2>Lista de Tarefas</h2>
+            <div>
+                <label for="filtroUsuario">Filtrar por ID do Usuário:</label>
+                <input type="number" id="filtroUsuario">
+                <button id="buttonFiltrar" onclick="filtrarTarefas()">Filtrar</button>
+            </div>
+            <ul id="tarefas"></ul>
+        </section>
+    </main>
+
+
+
+    <script src="javascript.js"></script>
+</body>
+</html>
